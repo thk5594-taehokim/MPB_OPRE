@@ -1,7 +1,10 @@
 # Selection of the Most Probable Best
 
-This project presents the codes for "Selection of the Most Probable Best (2024)" written by Taeho Kim, Kyoung-Kuk Kim, and Eunhye Song. The arxiv version of the paper can be found at https://arxiv.org/pdf/2207.07533. 
+This project presents the codes for "Selection of the Most Probable Best (2024)" written by Taeho Kim, Kyoung-Kuk Kim, and Eunhye Song. The arxiv version of the paper can be found at https://arxiv.org/pdf/2207.07533. Please contact Taeho Kim (thk5594@gmail.com) if you have any questions about this project. 
 
 ## Description
 
-This project consists of four folders, each containing the MATLAB codes we used to implement the numerical results and visualize them for each section. 
+This project consists of four folders, each containing the MATLAB codes we used to implement and visualize the numerical results for each section (Sections 7.1, 7.2, EC.8, and EC.9 of the paper). All codes are written in MATLAB. 
+
+### Section_7_1_Synthetic_Example
+
