@@ -1,4 +1,6 @@
-function [BM, tie, adv_delta, fav_delta] = BalMat(val, mpb, weight, i_b, type, delta_idx, crit_idx)
+function [BM, adv_delta, fav_delta] = BalMat2(obj)
+
+%val, mpb, weight, i_b, type, delta_idx, crit_idx
 
 % INPUT
 % val : perforamance at each alternative (k x 1 vector)
@@ -16,34 +18,37 @@ function [BM, tie, adv_delta, fav_delta] = BalMat(val, mpb, weight, i_b, type, d
 % fav_delta :indices of input parameters in the favorable set
 %             & delta-optimal (1 x length(fav_delta) vector)
 
-if nargin < 5
-    type = 1;
-end
+
 
 % delta_idx = [];
 
+pref_vec = obj.pref_vec;
+mpb = obj.mpb_est;
+weight = obj.weight;
+type = obj.BalMatType;
+i_b = obj.i_b;
 
-dif_pref = val(mpb) - val; % dif_pref: differences between the preferences probability of the MPB and each system
-x_minus = 1:length(val);
+
+dif_pref = pref_vec(mpb) - pref_vec; % dif_pref: differences between the preferences probability of the MPB and each system
+x_minus = 1:length(pref_vec);
 x_minus(mpb) = []; % suboptimal system indices
 
-tie_set = sum(dif_pref == 0);
-tie = tie_set > 1;
+% tie_set = sum(dif_pref == 0);
+% tie = tie_set > 1;
 
 
 temp_1 = min(dif_pref(x_minus));
 
-adv_delta = 1:length(i_b);
+adv_delta = 1:length(weight);
 
+BM = zeros(length(pref_vec), length(weight));
 
-
-BM = zeros(length(val), length(i_b));
+[delta_idx, crit_idx] = delta_set_idx(obj);
 
 if strcmp(type, 'mean_delta')
 
     x_b2 = i_b; x_b2(delta_idx) = 0;
     fav_delta = find(x_b2 == mpb);
-    % adv_delta(fav_delta) = [];
     adv_set = find(i_b ~= mpb);
     fav_set = find(i_b == mpb);
 
@@ -71,11 +76,6 @@ BM = BM./weight;
 
 BM = max(BM, 1);
 
-
-% if strcmp(type, 'KL_delta')
-%     % BM(mpb, crit_idx) = 1;
-%     BM(mpb, adv_set) = 1;
-% end
 
 BM(x_minus, fav_delta) = 1;
 BM(mpb, adv_delta) = 1;
