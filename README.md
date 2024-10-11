@@ -41,6 +41,8 @@ Further, the summary data will be saved in the folder named as:
 4. Section_EC_9_Synthetic_Example_Unequal_Weight/summary_data
 
 
-For 1, 2, and 4, our codes save the summary statistics as CSV files to generate the figures in Latex. For 3, the two-sided bound results are saved as mat file, and the summary of the results is displayed on the command window, 
+For 1, 2, and 4, our codes save the summary statistics as CSV files to generate the figures in Latex. For 3, the two-sided bound results are saved as mat file, and the summary of the results is displayed on the command window.
+
+
 
 
