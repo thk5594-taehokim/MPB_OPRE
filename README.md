@@ -26,8 +26,21 @@ Those datasets we obtained have already been saved in the folder.
 
 ### Summarizing the Simulation Outputs and Visualization
 
-To aggregate the simulated data and obtain the summary statistics, it is sufficient to implement the following files.
+You can implement the following files to aggregate the simulated data and obtain the summary statistics.
+
+1. Section_7_1_Synthetic_Example/data_summary.m
+2. Section_7_2_Market_Simulation/data_summary.m
+3. Section_EC_8_Optimality_Gap_Analysis/data_summary_two_sided.m (please see main_EMD.m)
+4. Section_EC_9_Synthetic_Example_Unequal_Weight/data_summary
+
+Further, the summary data will be saved in the folder named as:
+
+1. Section_7_1_Synthetic_Example/summary_data
+2. Section_7_2_Market_Simulation/summary_data
+3. Section_EC_8_Optimality_Gap_Analysis/data_summary_two_sided.m (please see main_EMD.m)
+4. Section_EC_9_Synthetic_Example_Unequal_Weight/data_summary
 
 
+For 1, 2, and 4, our codes save the summary statistics as CSV files to generate the figures in Latex. For 3, the two-sided bound results are saved as mat file and the summary of the results is displayed on the command window, 
 
 
