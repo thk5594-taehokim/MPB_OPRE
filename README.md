@@ -4,7 +4,7 @@ This project shares the codes for "Selection of the Most Probable Best (2024)" w
 
 ## Description
 
-This project consists of four folders, each containing the MATLAB codes we used to implement and visualize the numerical results for each section (Sections 7.1, 7.2, EC.8, and EC.9 of the paper). All codes are written in MATLAB and exploit parallel computing with the "parfor" function to speed up the experiments.  
+This project consists of four folders, each containing the MATLAB codes we used to implement and visualize the numerical results for each section (Sections 7.1, 7.2, EC.8, and EC.9 of the paper). All codes are written in MATLAB and exploit parallel computing with the "parfor" function to speed up the experiments. Due to the file size limit, only the first macro-runs of each experiment have already been saved in the folder, whereas the summary datasets are fully saved in each designated folder. 
 
 ### Simulation Experiments
 
@@ -21,8 +21,6 @@ The simulated datasets will be saved in the following folders for each experimen
 2. Section_7_2_Market_Simulation/sim_data
 3. Section_EC_8_Optimality_Gap_Analysis/EMD_macro_data
 4. Section_EC_9_Synthetic_Example_Unequal_Weight/Result
-
-Due to the file size limit, the first macro-runs of each dataset have already been saved in the folder.
 
 ### Summarizing the Simulation Outputs and Visualization
 
